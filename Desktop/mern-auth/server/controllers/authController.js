@@ -1,7 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import userModel from '../models/userModel.js';
-import userModel from '../models/userModel.js';
 
 export const register = async (req, res)=>{
   const {name, email, password} = req.body;
@@ -42,7 +41,7 @@ export const register = async (req, res)=>{
   }
 }
 
-export const login = async ()=>{
+export const login = async (req, res)=>{
     const {email, password} = req.body;
 
     if(!email || !password){
@@ -78,7 +77,7 @@ export const login = async ()=>{
     }
 }
 
-export const logout = async ()=> {
+export const logout = async (req, res)=> {
     try {
         res.clearCookie('token', {
             httpOnly: true,
