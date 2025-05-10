@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from "cors";
+import cors from 'cors';
 import 'dotenv/config';
 import cookieParser from 'cookie-parser';
 import connectDB from './config/mongodb.js';
@@ -10,10 +10,9 @@ const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
 
-// ✅ Allow both local and your actual deployed frontend
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-eight.vercel.app' // ✅ updated Vercel URL
+  'https://mern-auth-system-eight.vercel.app'
 ];
 
 app.use(express.json());
