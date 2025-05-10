@@ -1,4 +1,4 @@
-// src/pages/Login.jsx
+// ✅ Final Login.jsx
 
 import React, { useContext, useState } from 'react';
 import { assets } from '../assets/assets';
@@ -22,6 +22,7 @@ const Login = () => {
       if (state === 'Sign Up') {
         const { data } = await axiosInstance.post('/api/auth/register', { name, email, password });
         if (data.success) {
+          toast.success("Account created!");
           setIsLoggedin(true);
           getUserData();
           navigate('/');
@@ -31,6 +32,7 @@ const Login = () => {
       } else {
         const { data } = await axiosInstance.post('/api/auth/login', { email, password });
         if (data.success) {
+          toast.success("Login successful!");
           setIsLoggedin(true);
           getUserData();
           navigate('/');
