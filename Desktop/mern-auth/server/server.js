@@ -26,7 +26,9 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  credentials: true,
+exposedHeaders: ['Set-Cookie'] // ✅ add this
+
 }));
 
 app.get('/', (req, res) => res.send("API is Working perfectly fine!!!"));
