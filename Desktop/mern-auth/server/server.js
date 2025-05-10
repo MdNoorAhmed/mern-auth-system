@@ -10,20 +10,26 @@ const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
 
-// ✅ Allow both local and deployed frontend
+// ✅ Allow both local and your actual deployed frontend
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-alpha.vercel.app' 
+  'https://mern-auth-system-eight.vercel.app' // ✅ updated Vercel URL
 ];
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
-// API Endpoints
 app.get('/', (req, res) => res.send("API is Working perfectly fine!!!"));
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
