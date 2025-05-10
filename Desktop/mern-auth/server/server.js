@@ -6,23 +6,26 @@ import connectDB from './config/mongodb.js';
 import authRouter from './routes/authRoutes.js';
 import userRouter from './routes/userRoutes.js';
 
-
 const app = express();
 const port = process.env.PORT || 4000
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173']
-
+// ✅ Allow both local and deployed frontend
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://your-frontend-url.onrender.com' // <-- replace this with your actual frontend Render URL
+];
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
-
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 // API Endpoints
-app.get('/', (req, res)=> res.send("API is Working perfectly fine!!!"));
-app.use('/api/auth', authRouter)
-app.use('/api/user', userRouter)
+app.get('/', (req, res) => res.send("API is Working perfectly fine!!!"));
+app.use('/api/auth', authRouter);
+app.use('/api/user', userRouter);
 
-
-app.listen(port, ()=> console.log(`server started on PORT: ${port}`));
+app.listen(port, () => console.log(`server started on PORT: ${port}`));
