@@ -11,10 +11,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
+    // routes
     <div>
       <ToastContainer/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
+      <Routes> 
+        <Route  path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/email-verify' element={<EmailVerify/>}/>
         <Route path='/reset-password' element={<ResetPassword/>}/>
