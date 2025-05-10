@@ -7,4 +7,4 @@ const router = express.Router();
 router.get('/is-auth', userAuth, isAuthenticated);
 router.get('/data', userAuth, getUserData);
 
-export default router;
+export default  router;
