@@ -15,7 +15,7 @@ connectDB();
 // Allow these origins (add your Vercel frontend URL after deploying frontend)
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://your-frontend-name.vercel.app' // <-- Replace with your actual Vercel URL after deploying frontend
+  'https://mern-auth-system-gules.vercel.app/' // <-- Replace with your actual Vercel URL after deploying frontend
 ];
 
 // CORS configuration
