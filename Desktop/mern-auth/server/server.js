@@ -15,12 +15,17 @@ connectDB();
 // Allow these origins (add your Vercel frontend URL after deploying frontend)
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-gules.vercel.app/' // <-- Replace with your actual Vercel URL after deploying frontend
+  'https://mern-auth-system-gules.vercel.app' // <-- No trailing slash!
 ];
 
 // CORS configuration
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('Not allowed by CORS'));
+  },
   credentials: true,
 }));
 
