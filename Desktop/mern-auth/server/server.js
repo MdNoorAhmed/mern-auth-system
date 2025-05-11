@@ -12,16 +12,15 @@ const port = process.env.PORT || 4000;
 // Connect to MongoDB
 connectDB();
 
-// Allow these origins (add your Vercel frontend URL after deploying frontend)
+// Update: Robust CORS config for Render/Vercel
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-gules.vercel.app' // <-- No trailing slash!
+  'https://mern-auth-system-gules.vercel.app'
 ];
 
-// CORS configuration
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps, curl, etc.)
+    // Allow requests with no origin (like Postman, curl)
     if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) return callback(null, true);
     return callback(new Error('Not allowed by CORS'));
@@ -29,7 +28,6 @@ app.use(cors({
   credentials: true,
 }));
 
-// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
@@ -38,5 +36,4 @@ app.get('/', (req, res) => res.send("API is Working perfectly fine!!!"));
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-// Start server
 app.listen(port, () => console.log(`Server started on PORT: ${port}`));
