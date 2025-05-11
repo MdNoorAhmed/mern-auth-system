@@ -1,10 +1,9 @@
-import express from 'express';
-import userAuth from '../middleware/userAuth.js'; // ✅ Corrected path (no "s")
-import { isAuthenticated, getUserData } from '../controllers/userController.js';
+import express from "express";
+import userAuth from "../middleware/userAuth.js";
+import { getUserData } from "../controllers/userController.js";
 
-const router = express.Router();
+const userRouter = express.Router();
 
-router.get('/is-auth', userAuth, isAuthenticated);
-router.get('/data', userAuth, getUserData);
+userRouter.get('/data', userAuth, getUserData)
 
-export default  router;
+export default userRouter;

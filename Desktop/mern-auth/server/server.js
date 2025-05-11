@@ -8,29 +8,30 @@ import userRouter from './routes/userRoutes.js';
 
 const app = express();
 const port = process.env.PORT || 4000;
+
+// Connect to MongoDB
 connectDB();
 
+// Allow these origins (add your Vercel frontend URL after deploying frontend)
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-eight.vercel.app'
+  'https://your-frontend-name.vercel.app' // <-- Replace with your actual Vercel URL after deploying frontend
 ];
 
+// CORS configuration
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
+
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
-
+// API Endpoints
 app.get('/', (req, res) => res.send("API is Working perfectly fine!!!"));
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-app.listen(port, () => console.log(`server started on PORT: ${port}`));
+// Start server
+app.listen(port, () => console.log(`Server started on PORT: ${port}`));
