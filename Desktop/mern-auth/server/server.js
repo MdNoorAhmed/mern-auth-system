@@ -15,7 +15,7 @@ connectDB();
 // Update: Robust CORS config for Render/Vercel
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-system-gules.vercel.app'
+  'https://noorbuilds-auth.vercel.app'
 ];
 
 app.use(cors({
