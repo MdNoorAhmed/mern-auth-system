@@ -16,6 +16,7 @@ connectDB();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://noorbuilds-auth.vercel.app'
+  
 ];
 
 app.use(cors({
