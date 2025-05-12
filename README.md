@@ -67,6 +67,25 @@ mern-auth-system/
 
 ---
 
+## 📸 Screenshots
+<img width="1512" alt="Screenshot 2025-05-12 at 1 28 14 AM" src="https://github.com/user-attachments/assets/45e704f0-950e-4892-bfa7-62c92845e54c" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 29 41 AM" src="https://github.com/user-attachments/assets/b3f20704-de52-4426-b5f7-64800b5054c0" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 29 48 AM" src="https://github.com/user-attachments/assets/b25ffb54-edf6-4c9d-91db-744dbf320752" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 30 19 AM" src="https://github.com/user-attachments/assets/09178e5f-232f-426b-a9ee-3a00d793dbeb" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 30 57 AM" src="https://github.com/user-attachments/assets/e14933a7-9b55-4251-b656-ee8443d1580f" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 31 47 AM" src="https://github.com/user-attachments/assets/e4ec3e5a-d404-4f98-a870-1cb4cc7cd4e4" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 32 01 AM" src="https://github.com/user-attachments/assets/8e915fd1-dbb0-4e47-9e6a-192ee5c33058" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 32 31 AM" src="https://github.com/user-attachments/assets/e4f50926-fb00-4a54-8cc2-e98d1cb57c89" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 33 05 AM" src="https://github.com/user-attachments/assets/d81fbf66-00dd-4b49-8cd7-e365361d20eb" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 33 31 AM" src="https://github.com/user-attachments/assets/16544aef-481a-48e1-be88-7bb9eb1223e4" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 35 44 AM" src="https://github.com/user-attachments/assets/c3f58122-f20d-4715-a4c6-dce39001e8a0" />
+<img width="1133" alt="Screenshot 2025-05-12 at 1 36 22 AM" src="https://github.com/user-attachments/assets/093713ab-6358-43b5-8062-bf73dd6705e9" />
+<img width="1133" alt="Screenshot 2025-05-12 at 1 36 36 AM" src="https://github.com/user-attachments/assets/2c39b117-edf5-49ef-b83e-92437a430a95" />
+<img width="1512" alt="Screenshot 2025-05-12 at 1 40 22 AM" src="https://github.com/user-attachments/assets/b971891f-c015-454d-b2ff-f23ea2dd9917" />
+
+
+---
+
 ## 🔧 Setup Instructions
 
 ### 1. Clone the Repository
@@ -148,7 +167,7 @@ See full documentation at `/docs` route in your app.
 
 ## 🧑‍💻 Author
 **Md Noor Ahmed**  
-[Portfolio](https://mdnoorahmed.com)  |  [GitHub](https://github.com/MdNoorAhmed)
+[Portfolio](https://mdnoorahmed.com)  |  [LinkdIn]([https://github.com/MdNoorAhmed](https://github.com/MdNoorAhmed))
 
 ---
 
