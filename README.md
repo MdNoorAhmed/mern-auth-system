@@ -90,7 +90,7 @@ mern-auth-system/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/mern-auth-system.git
+git clone https://github.com/MdNoorAhmed/mern-auth-system.git
 cd mern-auth-system
 ```
 
